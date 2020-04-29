@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CycTrack</string>
+    <string name="access_token">pk.eyJ1Ijoicm9oYW5jaHV0a2UiLCJhIjoiY2s5Z2EzZHFsMGx4OTNnbzFyanA0Y3A2aiJ9.HCubwvcHitSC9UKvMELkqg</string>
+    <string name="start_navigating">Start Navigating</string>
+</resources>

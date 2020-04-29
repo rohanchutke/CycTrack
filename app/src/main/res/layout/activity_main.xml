@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="20dp"
+        android:text="Make a Selection!"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <TableLayout
+        android:id="@+id/tbl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_main"
+        android:layout_centerInParent="true">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_maps"
+                android:layout_width="170px"
+                android:layout_height="170px"
+                android:layout_gravity="center"
+                android:src="@drawable/pin" />
+
+            <Button
+                android:id="@+id/btn_maps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Maps"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/img_weather"
+                android:layout_width="170px"
+                android:layout_height="170px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/cloudy" />
+
+            <Button
+                android:id="@+id/btn_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Weather"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_reviews"
+                android:layout_width="170px"
+                android:layout_height="170px"
+                android:layout_gravity="center"
+                android:src="@drawable/feedback" />
+
+            <Button
+                android:id="@+id/btn_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Reviews"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+
+            <ImageView
+                android:id="@+id/img_speedo"
+                android:layout_width="170px"
+                android:layout_height="170px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/dashboard" />
+
+            <Button
+                android:id="@+id/btn_speedometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Device Speed"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_dnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbl_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="DND" />
+
+
+</RelativeLayout>
