@@ -16,6 +16,8 @@ public class OpenWeatherMap {
     private String name;
     private int cod;
 
+    // Declaring construction classes
+
     public OpenWeatherMap() {
     }
 

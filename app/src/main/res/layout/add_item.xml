@@ -2,18 +2,104 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2blur">
+    android:background="#130C20">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/rajdhani"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Review Your Route"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/rajdhani"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="From: "
+        android:textColor="@color/test_color"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_from"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/rajdhani"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="To: "
+        android:textColor="@color/test_color"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_source_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/tv_from"
+        android:fontFamily="@font/rajdhani"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="test"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_dest_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_from"
+        android:layout_toRightOf="@id/tv_to"
+        android:fontFamily="@font/rajdhani"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="test"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
 
     <EditText
         android:id="@+id/editName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250dp"
-        android:backgroundTint="#fff"
+        android:backgroundTint="@color/test_color"
+        android:fontFamily="@font/rajdhani"
         android:hint="Enter your name"
-        android:textColorHint="#fff" />
-
+        android:textColor="#fff"
+        android:textColorHighlight="@color/test_color"
+        android:textColorHint="#fff"
+        android:textColorLink="@color/test_color"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editFeedback"
@@ -21,21 +107,37 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editName"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#fff"
+        android:backgroundTint="@color/test_color"
+        android:fontFamily="@font/rajdhani"
         android:hint="Comment here please"
-        android:textColorHint="#fff" />
+        android:textColor="#fff"
+        android:textColorHighlight="@color/test_color"
+        android:textColorHint="#fff"
+        android:textColorLink="@color/test_color"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnSubmit"
+    <RatingBar
+        android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editFeedback"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custom_button"
+        android:layout_marginTop="20dp"
+        android:theme="@style/RatingBar" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_selector2"
+        android:fontFamily="@font/rajdhani"
+        android:foreground="?android:attr/selectableItemBackground"
         android:padding="10dp"
         android:text="submit"
-        android:textColor="#fff" />
-
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -1,49 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3a424d"
-    android:orientation="vertical"
-    tools:context=".SafetyActivity">
+    android:background="#130C20">
 
     <TextView
-        android:id="@+id/tvHeading"
+        android:id="@+id/tv_heading1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:text="Are You Forgetting Something??"
+        android:background="@drawable/border"
+        android:fontFamily="@font/rajdhani"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Safety Checklist"
         android:textColor="#fff"
-        android:textSize="24sp" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView3"
         android:layout_width="500px"
         android:layout_height="500px"
-        android:layout_below="@id/tvHeading"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/cycleimage" />
-
-    <ListView
-        android:id="@+id/checkable_list"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_below="@id/imageView2"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/btnLetsGo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/checkable_list"
+        android:layout_below="@id/tv_heading1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/custom_button"
-        android:enabled="false"
-        android:text="Lets Go!"
-        android:textColor="#fff" />
+        android:src="@drawable/safetytest" />
+
+    <CheckedTextView
+        android:id="@+id/ctv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:checkMarkTint="@color/test_color"
+        android:fontFamily="@font/rajdhani"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Helmet"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <CheckedTextView
+        android:id="@+id/ctv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ctv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:checkMarkTint="@color/test_color"
+        android:fontFamily="@font/rajdhani"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Lights"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <CheckedTextView
+        android:id="@+id/ctv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ctv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:checkMarkTint="@color/test_color"
+        android:fontFamily="@font/rajdhani"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Knee-Pads"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <CheckedTextView
+        android:id="@+id/ctv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ctv3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:checkMarkTint="@color/test_color"
+        android:fontFamily="@font/rajdhani"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Arm Guards"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <CheckedTextView
+        android:id="@+id/ctv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ctv4"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:checkMarkTint="@color/test_color"
+        android:fontFamily="@font/rajdhani"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Visibility Jacket"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>

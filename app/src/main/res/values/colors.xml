@@ -3,5 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="test_color">#F7126B</color>
     <color name="mapboxBlue">#4264fb</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ui_color">#EA1646</color>
+    <color name="grey">#444444</color>
 </resources>

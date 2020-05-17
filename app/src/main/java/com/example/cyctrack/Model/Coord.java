@@ -1,8 +1,11 @@
 package com.example.cyctrack.Model;
 
+// Declaring Coordinates class
 public class Coord {
     private double lat;
     private double lon;
+
+    // Declaring constructor classes
 
     public Coord(double lat, double lon) {
         this.lat = lat;

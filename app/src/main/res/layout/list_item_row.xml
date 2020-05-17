@@ -4,28 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/border"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
 
-
     <TextView
-        android:id="@+id/tv_item_name"
+        android:id="@+id/tv_route_final1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="TextView"
-        android:textColor="#000"
-        android:textSize="25dp" />
+        android:fontFamily="@font/rajdhani"
+        android:text="Route: "
+        android:textColor="@color/test_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tv_brand"
+        android:id="@+id/tv_route_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_item_name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/tv_route_final1"
+        android:fontFamily="@font/rajdhani"
+        android:text="Route"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_rating_final1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_route_final"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="14dp"
-        android:text="TextView"
-        android:textSize="15dp" />
+        android:fontFamily="@font/rajdhani"
+        android:text="Rating: "
+        android:textColor="@color/test_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_rating_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_route_final"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_rating_final1"
+        android:fontFamily="@font/rajdhani"
+        android:text="Rating"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_rating_outof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_route_final"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/tv_rating_final"
+        android:fontFamily="@font/rajdhani"
+        android:text=" / 5"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_feedback_final1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rating_final"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/rajdhani"
+        android:text="Comment: "
+        android:textColor="@color/test_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_feedback_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rating_final"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/tv_feedback_final1"
+        android:fontFamily="@font/rajdhani"
+        android:text="Comment"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
 
 </RelativeLayout>

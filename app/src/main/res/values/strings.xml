@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">CycTrack</string>
-    <string name="access_token">pk.eyJ1Ijoicm9oYW5jaHV0a2UiLCJhIjoiY2s5Z2EzZHFsMGx4OTNnbzFyanA0Y3A2aiJ9.HCubwvcHitSC9UKvMELkqg</string>
+    <string name="access_token">pk.eyJ1Ijoia2V3YWxnIiwiYSI6ImNrOXo0Yjk4ZTA3Y3czbHBqc2lqc3h5NGMifQ.K7pqj0vwfqJBcj8LacoDKQ</string>
     <string name="start_navigating">Start Navigating</string>
+    <string name="user_location_permission_explanation">This app needs location permissions to show its functionality.</string>
+    <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
+    <string name="description">"\" If it's been ridden, it's on CycTrack. CycTrack turns every mobile phone into a sophisticated cycling computer which explores new routes, with safety measures like speed limit alert, DND mode "\"</string>
 </resources>

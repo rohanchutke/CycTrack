@@ -1,11 +1,14 @@
 package com.example.cyctrack.Model;
 
+
+// Declaring weather class
 public class Weather {
     private int id;
     private String main;
     private String description;
     private String icon;
 
+    // Declaring constructor classes
     public Weather(int id, String main, String description, String icon) {
         this.id = id;
         this.main = main;

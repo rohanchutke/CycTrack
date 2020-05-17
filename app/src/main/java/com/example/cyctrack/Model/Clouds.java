@@ -1,7 +1,10 @@
 package com.example.cyctrack.Model;
 
+// Declaring clouds class
 public class Clouds {
     private int all;
+
+    // Declaring constructor class
 
     public Clouds(int all) {
         this.all = all;

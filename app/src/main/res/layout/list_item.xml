@@ -3,25 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2blur">
+    android:background="#130C20">
 
     <TextView
         android:id="@+id/title_submissions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/lv_items"
+        android:layout_below="@id/btn_back_listitems"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Submitted Reviews: "
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/rajdhani"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Submitted Reviews"
         android:textColor="#fff"
-        android:textSize="25dp" />
+        android:textSize="35dp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/lv_items"
-        android:layout_width="1000px"
-        android:layout_height="1000px"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="25dp"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_below="@id/title_submissions"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@color/white"
+        android:dividerHeight="4px"
+        android:fontFamily="@font/open_sans"
         android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btn_back_listitems"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/housing1"
+        android:fontFamily="@font/open_sans"
+        android:foreground="?android:attr/selectableItemBackground" />
 
 </RelativeLayout>

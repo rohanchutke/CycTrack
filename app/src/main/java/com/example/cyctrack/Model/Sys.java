@@ -1,5 +1,6 @@
 package com.example.cyctrack.Model;
 
+//Declaring sys class
 public class Sys {
     private int type;
     private int id;
@@ -8,6 +9,7 @@ public class Sys {
     private double sunrise;
     private double sunset;
 
+    //Declaring construction classes
     public Sys(int type, int id, double message, String country, double sunrise, double sunset) {
         this.type = type;
         this.id = id;

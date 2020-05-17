@@ -1,28 +1,24 @@
 package com.example.cyctrack;
 
+// Importing necessary modules
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-
-import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
+import android.os.Handler;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.CheckedTextView;
 
-import com.example.cyctrack.Model.Weather;
+public class SafetyActivity extends AppCompatActivity {
 
-import java.util.ArrayList;
+    // Setting splash time out to be 2 secs
+    private static int SPLASH_TIME_OUT = 2000;
 
-public class SafetyActivity extends Activity {
-    ArrayList<String> selectedItems = new ArrayList<>();
 
-    Button btn_letsgo;
+    // Declaring variables
+    CheckedTextView checkedview1, checkedview2, checkedview3, checkedview4, checkedview5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,36 +26,28 @@ public class SafetyActivity extends Activity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_safety);
 
-        btn_letsgo = findViewById(R.id.btnLetsGo);
-        ListView chl = findViewById(R.id.checkable_list);
-        chl.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        String[] items = {"Helmet", "Lights", "Knee-Pads", "Arm-Guards", "Visibility Jacket"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.rowlayout, R.id.txt_title, items);
-        chl.setAdapter(adapter);
-        chl.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // Casting variables with connection to xml file
+        checkedview1 = findViewById(R.id.ctv1);
+        // Setting the check box to be ticked
+        checkedview1.setChecked(true);
+        checkedview2 = findViewById(R.id.ctv2);
+        checkedview2.setChecked(true);
+        checkedview3 = findViewById(R.id.ctv3);
+        checkedview3.setChecked(true);
+        checkedview4 = findViewById(R.id.ctv4);
+        checkedview4.setChecked(true);
+        checkedview5 = findViewById(R.id.ctv5);
+        checkedview5.setChecked(true);
+
+
+        // when time runs out, putting an intent to go to Map activity
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedItem = ((TextView) view).getText().toString();
-                if (selectedItems.contains(selectedItem)) {
-                    selectedItems.remove(selectedItem);
-                } else {
-                    selectedItems.add(selectedItem);
-                }
-
-                if (selectedItems.size() == 5) {
-                    btn_letsgo.setEnabled(true);
-                    btn_letsgo.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent i = new Intent(SafetyActivity.this, WeatherActivity.class);
-                            startActivity(i);
-                        }
-                    });
-                } else {
-                    btn_letsgo.setEnabled(false);
-                }
+            public void run() {
+                Intent i = new Intent(SafetyActivity.this, MapTestActivity.class);
+                startActivity(i);
+                finish();
             }
-        });
+        }, SPLASH_TIME_OUT);
     }
-
 }

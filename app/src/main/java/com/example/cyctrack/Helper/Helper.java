@@ -1,5 +1,6 @@
 package com.example.cyctrack.Helper;
 
+// Importing necessary modules
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,6 +14,7 @@ public class Helper {
     public Helper() {
     }
 
+    // Connection to database
     public String getHTTPData(String urlString) {
         try {
             URL url = new URL(urlString);

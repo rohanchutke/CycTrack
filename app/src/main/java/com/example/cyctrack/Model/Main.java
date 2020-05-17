@@ -1,5 +1,6 @@
 package com.example.cyctrack.Model;
 
+// // Declaring Main class
 public class Main {
     private double temp;
     private double pressure;
@@ -7,6 +8,7 @@ public class Main {
     private double temp_min;
     private double temp_max;
 
+    // Declaring constructor classes
     public Main(double temp, double pressure, int humidity, double temp_min, double temp_max) {
         this.temp = temp;
         this.pressure = pressure;

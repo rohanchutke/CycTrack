@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#130C20"
+    tools:context=".MapTestActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/startbutton"
+        android:layout_below="@id/edt_address"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="10dp"
+        mapbox:mapbox_cameraZoom="15" />
+
+    <EditText
+        android:id="@+id/edt_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/btn_submit"
+        android:backgroundTint="@color/test_color"
+        android:fontFamily="@font/rajdhani"
+        android:hint="Enter address"
+        android:inputType="textCapWords"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHighlight="@color/test_color"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/test_color"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/homeBtn"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/communications"
+        android:enabled="false"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/startbutton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_selector2"
+        android:enabled="false"
+        android:fontFamily="@font/rajdhani"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="5dp"
+        android:text="Start Navigation"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/homeBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/housing1"
+        android:fontFamily="@font/open_sans" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/tglNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/startbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="15dp"
+        android:thumb="@drawable/thumb1"
+        app:track="@drawable/track" />
+
+    <TextView
+        android:id="@+id/tv_ballon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/startbutton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@id/tglNew"
+        android:gravity="center"
+        android:text="\?"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_speed_latest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/tglNew"
+        android:fontFamily="@font/open_sans"
+        android:text="0.0 km/h"
+        android:textSize="25sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_review_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/startbutton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_selector2"
+        android:enabled="false"
+        android:fontFamily="@font/rajdhani"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="5dp"
+        android:text="Review Route"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+</RelativeLayout>
