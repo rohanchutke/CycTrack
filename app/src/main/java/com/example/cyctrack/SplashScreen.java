@@ -28,9 +28,15 @@ public class SplashScreen extends AppCompatActivity {
 
         tv_title_splash = findViewById(R.id.tv_title_splash);
 
+
+        // Getting the text in Spannable String
         String title = tv_title_splash.getText().toString();
         SpannableString sstitle = new SpannableString(title);
+
+        // Changing the font color of the spannable screen with the ui color
         ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
+
+        // Setting the start and end points to color the text
         sstitle.setSpan(uicolor1, 7, 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         tv_title_splash.setText(sstitle);
 

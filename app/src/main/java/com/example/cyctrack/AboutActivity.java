@@ -31,10 +31,14 @@ public class AboutActivity extends AppCompatActivity {
         btnhome_aboutus = findViewById(R.id.btn_home_aboutus);
         tv_title = findViewById(R.id.tv1);
 
-
+        // Getting the text in Spannable String
         String title = tv_title.getText().toString();
         SpannableString sstitle = new SpannableString(title);
+
+        // Changing the font color of the spannable screen with the ui color
         ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
+
+        // Setting the start and end points to color the text
         sstitle.setSpan(uicolor1, 2, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         tv_title.setText(sstitle);
 
@@ -42,12 +46,15 @@ public class AboutActivity extends AppCompatActivity {
         tv_desc = findViewById(R.id.tv_desc);
         String desc = tv_desc.getText().toString();
 
+        // Getting the text in Spannable String
         SpannableString ssdesc = new SpannableString(desc);
 
+        // Changing the font color of the spannable screen with the ui color
         ForegroundColorSpan uicolor2 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
         ForegroundColorSpan uicolor3 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
         ForegroundColorSpan uicolor4 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
 
+        // Setting the start and end points to color the text
         ssdesc.setSpan(uicolor2, 31, 39, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         ssdesc.setSpan(uicolor3, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         ssdesc.setSpan(uicolor4, 194, 195, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

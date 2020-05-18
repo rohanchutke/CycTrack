@@ -71,9 +71,15 @@ public class ListItem extends AppCompatActivity {
             }
         });
 
+
+        // Getting the text in Spannable String
         String title = titleSubmissions.getText().toString();
         SpannableString sstitle = new SpannableString(title);
+
+        // Changing the font color of the spannable screen with the ui color
         ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
+
+        // Setting the start and end points to color the text
         sstitle.setSpan(uicolor1, 9, 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         titleSubmissions.setText(sstitle);
 

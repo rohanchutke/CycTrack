@@ -88,9 +88,14 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
         String destination_value = destination_result.getString("Destination_key_value", "Data Not Found");
         tv_dest_Route.setText(destination_value);
 
+        // Getting the text in Spannable String
         String title = tv_title.getText().toString();
         SpannableString sstitle = new SpannableString(title);
+
+        // Changing the font color of the spannable screen with the ui color
         ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
+
+        // Setting the start and end points to color the text
         sstitle.setSpan(uicolor1, 6, 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         tv_title.setText(sstitle);
 
