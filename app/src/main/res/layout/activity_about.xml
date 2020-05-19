@@ -52,6 +52,6 @@
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/housing1"
+        android:background="@drawable/backbtnmaps"
         android:fontFamily="@font/open_sans" />
 </RelativeLayout>

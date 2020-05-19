@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.app.ListActivity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -232,6 +230,7 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
             txtCity.setVisibility(1);
             txtDescription.setVisibility(1);
             txtHumidity.setVisibility(1);
+            imageView.setVisibility(1);
             txtCelsius.setVisibility(1);
             tvSettext.setVisibility(1);
 
@@ -256,20 +255,20 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
 
             // If current weather description is clear sky or few clouds, set textview to good day to ride
             if (txtDescription.getText().toString().matches("clear sky") || txtDescription.getText().toString().matches("few clouds")) {
-                tvSettext.setText("It is a good day to ride !!");
+                tvSettext.setText("It is SAFE to ride today !!");
                 String title = tvSettext.getText().toString();
                 SpannableString sstitle = new SpannableString(title);
                 ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
-                sstitle.setSpan(uicolor1, 8, 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                sstitle.setSpan(uicolor1, 5, 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 tvSettext.setText(sstitle);
 
                 // If current weather condition is anything else then set textview as not a good day to ride
             } else {
-                tvSettext.setText("It is unsafe to ride today !!");
+                tvSettext.setText("It is UNSAFE to ride today !!");
                 String title1 = tvSettext.getText().toString();
                 SpannableString sstitle1 = new SpannableString(title1);
                 ForegroundColorSpan uicolor2 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
-                sstitle1.setSpan(uicolor2, 6, 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                sstitle1.setSpan(uicolor2, 5, 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 tvSettext.setText(sstitle1);
             }
 
@@ -281,8 +280,8 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
 
             // Load image from OpenWeather MAp based on the description of current weather condition
             Picasso.get()
-                    .load(new StringBuilder("https://openweathermap.org/img/w/").append(openWeatherMap.getWeather().get(0).getIcon())
-                            .append(".png").toString())
+                    .load(new StringBuilder("https://openweathermap.org/img/wn/").append(openWeatherMap.getWeather().get(0).getIcon())
+                            .append("@2x.png").toString())
                     .into(imageView);
 
         }

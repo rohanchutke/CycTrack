@@ -12,7 +12,6 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.WindowManager;
 import android.widget.TextView;
-import com.example.cyctrack.Model.Main;
 
 public class SplashScreen extends AppCompatActivity {
     TextView tv_title_splash;

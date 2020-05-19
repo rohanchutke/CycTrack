@@ -10,6 +10,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 import android.widget.CheckedTextView;
+import android.widget.ProgressBar;
+
+import java.util.Observable;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
 
 public class SafetyActivity extends AppCompatActivity {
 
@@ -17,8 +22,13 @@ public class SafetyActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 2000;
 
 
+
+
     // Declaring variables
     CheckedTextView checkedview1, checkedview2, checkedview3, checkedview4, checkedview5;
+    Handler handler = new Handler();
+    ProgressBar progressBar;
+    int progressStatus = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +37,10 @@ public class SafetyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_safety);
 
         // Casting variables with connection to xml file
+        progressBar = findViewById(R.id.progressBar);
         checkedview1 = findViewById(R.id.ctv1);
+
+
         // Setting the check box to be ticked
         checkedview1.setChecked(true);
         checkedview2 = findViewById(R.id.ctv2);
@@ -38,7 +51,23 @@ public class SafetyActivity extends AppCompatActivity {
         checkedview4.setChecked(true);
         checkedview5 = findViewById(R.id.ctv5);
         checkedview5.setChecked(true);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(progressStatus <100){
+                    progressStatus++;
+                    android.os.SystemClock.sleep(25);
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressBar.setProgress(progressStatus);
+                        }
+                    });
+                }
 
+
+            }
+        }).start();
 
         // when time runs out, putting an intent to go to Map activity
         new Handler().postDelayed(new Runnable() {

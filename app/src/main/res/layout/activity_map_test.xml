@@ -25,6 +25,7 @@
         android:layout_below="@id/homeBtn"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="5dp"
         android:layout_toLeftOf="@id/btn_submit"
         android:backgroundTint="@color/test_color"
@@ -41,17 +42,19 @@
 
     <Button
         android:id="@+id/btn_submit"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_below="@id/homeBtn"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/communications"
+
+        android:background="@drawable/button_selector2"
         android:enabled="false"
         android:fontFamily="@font/open_sans"
-        android:gravity="center"
-        android:textColor="#fff" />
+        android:text=">"
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/startbutton"
@@ -82,7 +85,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/housing1"
+        android:background="@drawable/backbtnmaps"
         android:fontFamily="@font/open_sans" />
 
 

@@ -127,5 +127,14 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_below="@id/ctv5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyProgressBar"/>
+
 
 </RelativeLayout>
