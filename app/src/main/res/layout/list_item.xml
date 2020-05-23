@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#130C20">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/title_submissions"
@@ -13,14 +13,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/border"
         android:fontFamily="@font/rajdhani"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:text="Submitted Reviews"
-        android:textColor="#fff"
+        android:textColor="@color/ui_element_color"
         android:textSize="35dp"
         android:textStyle="bold" />
 
@@ -32,7 +31,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="40dp"
-        android:divider="@color/white"
+        android:divider="#000"
         android:dividerHeight="4px"
         android:fontFamily="@font/open_sans"
         android:padding="10dp" />
@@ -43,7 +42,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/backbtnmaps"
+        android:background="@drawable/finalback"
         android:fontFamily="@font/open_sans"
         android:foreground="?android:attr/selectableItemBackground" />
 

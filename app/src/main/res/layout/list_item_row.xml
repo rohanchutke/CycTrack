@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/border"
+    android:background="@color/white"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
 
@@ -16,7 +16,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/rajdhani"
         android:text="Route: "
-        android:textColor="@color/test_color"
+        android:textColor="@color/ui_element_color"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -30,7 +30,7 @@
         android:layout_toRightOf="@id/tv_route_final1"
         android:fontFamily="@font/rajdhani"
         android:text="Route"
-        android:textColor="#fff"
+        android:textColor="#000"
         android:textSize="20sp" />
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_marginLeft="10dp"
         android:fontFamily="@font/rajdhani"
         android:text="Rating: "
-        android:textColor="@color/test_color"
+        android:textColor="@color/ui_element_color"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -55,7 +55,7 @@
         android:layout_toRightOf="@id/tv_rating_final1"
         android:fontFamily="@font/rajdhani"
         android:text="Rating"
-        android:textColor="#fff"
+        android:textColor="#000"
         android:textSize="20sp" />
 
     <TextView
@@ -80,7 +80,7 @@
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/rajdhani"
         android:text="Comment: "
-        android:textColor="@color/test_color"
+        android:textColor="@color/ui_element_color"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -96,7 +96,7 @@
         android:layout_toRightOf="@id/tv_feedback_final1"
         android:fontFamily="@font/rajdhani"
         android:text="Comment"
-        android:textColor="#fff"
+        android:textColor="#000"
         android:textSize="20sp" />
 
 

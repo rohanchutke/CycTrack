@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -38,7 +39,7 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
     // Declaring variables
     EditText editName, editFeedback;
     Button btnSubmit;
-    TextView tvRating, tv_source_Route, tv_dest_Route, tv_title;
+    TextView tvRating, tv_source_Route, tv_dest_Route, tv_title, tv_from_title, tv_to_title;
     private RatingBar ratingBar;
     private float ratedValue;
 
@@ -57,6 +58,11 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
         tv_source_Route = findViewById(R.id.tv_source_route);
         tv_dest_Route = findViewById(R.id.tv_dest_route);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        tv_from_title = findViewById(R.id.tv_from);
+        tv_to_title = findViewById(R.id.tv_to);
+
+        tv_from_title.setPaintFlags(tv_from_title.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        tv_to_title.setPaintFlags(tv_to_title.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         //Getting the rating value in float as given by the user
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -86,7 +92,7 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
         SpannableString sstitle = new SpannableString(title);
 
         // Changing the font color of the spannable screen with the ui color
-        ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
+        ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.background_color));
 
         // Setting the start and end points to color the text
         sstitle.setSpan(uicolor1, 6, 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

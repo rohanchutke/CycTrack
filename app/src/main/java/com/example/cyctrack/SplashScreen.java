@@ -24,21 +24,19 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
-
         tv_title_splash = findViewById(R.id.tv_title_splash);
 
-
-        // Getting the text in Spannable String
+        /*// Getting the text in Spannable String
         String title = tv_title_splash.getText().toString();
         SpannableString sstitle = new SpannableString(title);
 
         // Changing the font color of the spannable screen with the ui color
-        ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
+        ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color_ss));
 
         // Setting the start and end points to color the text
         sstitle.setSpan(uicolor1, 7, 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         tv_title_splash.setText(sstitle);
-
+*/
         //// when time runs out, putting an intent to go to weather activity
         new Handler().postDelayed(new Runnable() {
             @Override

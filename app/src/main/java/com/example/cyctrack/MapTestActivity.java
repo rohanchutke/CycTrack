@@ -40,6 +40,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -105,9 +107,11 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
     private static final String TAG = "MainActivity";
     private String TEST = "NAVI_TEST";
     private EditText edt_search;
-    private Button btn_submit, btn_home, btn_review;
-    private TextView tv_speedtest, tv_ballon;
+    private Button btn_submit, btn_review;
+    private Button btn_home;
+    private TextView tv_speedtest;
     private SwitchCompat tglbtn;
+    private ImageView iv_info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,8 +129,8 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
         edt_search = findViewById(R.id.edt_address);
         tglbtn = findViewById(R.id.tglNew);
         tv_speedtest = findViewById(R.id.tv_speed_latest);
-        tv_ballon = findViewById(R.id.tv_ballon);
         btn_submit = findViewById(R.id.btn_submit);
+        iv_info = findViewById(R.id.iv_ballon);
 
         // Getting access to Notification Service
         mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -137,7 +141,7 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
         startButton.setOnClickListener(this);
         btn_submit.setOnClickListener(this);
         btn_review.setOnClickListener(this);
-        tv_ballon.setOnClickListener(this);
+        iv_info.setOnClickListener(this);
 
 
         btn_home.setOnClickListener(new View.OnClickListener() {
@@ -200,9 +204,6 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
             }
         });
 
-        // Underlining the About us Textview
-        tv_ballon.setPaintFlags(tv_ballon.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-
         // Using ballon library to show a pop up When user clicks on DND mode to explain its functionality
         Balloon balloon = new Balloon.Builder(getApplicationContext())
                 .setArrowSize(15)
@@ -216,23 +217,23 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
                 .setAlpha(0.9f)
                 .setText("This is Do Not Disturb mode. All the incoming calls will be silenced.")
                 .setTextColor(ContextCompat.getColor(this, R.color.white))
-                .setBackgroundColor(ContextCompat.getColor(this, R.color.ui_color))
+                .setBackgroundColor(ContextCompat.getColor(this, R.color.ui_element_color))
                 .setBalloonAnimation(BalloonAnimation.FADE)
                 .build();
 
 
         // Setting the ballon on when clicked for 2 sec
-        tv_ballon.setOnClickListener(new View.OnClickListener() {
+        iv_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                balloon.show(tv_ballon);
+                balloon.show(iv_info);
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         balloon.dismiss();
                     }
-                }, 2000);
+                }, 3000);
             }
         });
 

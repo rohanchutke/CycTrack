@@ -122,8 +122,8 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
 
         String title = tvTitle.getText().toString();
         SpannableString sstitle = new SpannableString(title);
-        ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
-        sstitle.setSpan(uicolor1, 5, 15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color_ss));
+        sstitle.setSpan(uicolor1, 4, 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         tvTitle.setText(sstitle);
 
 
@@ -258,7 +258,7 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
                 tvSettext.setText("It is SAFE to ride today !!");
                 String title = tvSettext.getText().toString();
                 SpannableString sstitle = new SpannableString(title);
-                ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
+                ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.test_color_ss));
                 sstitle.setSpan(uicolor1, 5, 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 tvSettext.setText(sstitle);
 
@@ -267,7 +267,7 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
                 tvSettext.setText("It is UNSAFE to ride today !!");
                 String title1 = tvSettext.getText().toString();
                 SpannableString sstitle1 = new SpannableString(title1);
-                ForegroundColorSpan uicolor2 = new ForegroundColorSpan(getResources().getColor(R.color.test_color));
+                ForegroundColorSpan uicolor2 = new ForegroundColorSpan(getResources().getColor(R.color.test_color_ss));
                 sstitle1.setSpan(uicolor2, 5, 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 tvSettext.setText(sstitle1);
             }

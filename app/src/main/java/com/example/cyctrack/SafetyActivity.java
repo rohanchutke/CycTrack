@@ -19,10 +19,7 @@ import java.util.function.Consumer;
 public class SafetyActivity extends AppCompatActivity {
 
     // Setting splash time out to be 2 secs
-    private static int SPLASH_TIME_OUT = 2000;
-
-
-
+    private static int SPLASH_TIME_OUT = 3000;
 
     // Declaring variables
     CheckedTextView checkedview1, checkedview2, checkedview3, checkedview4, checkedview5;
@@ -54,9 +51,9 @@ public class SafetyActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while(progressStatus <100){
+                while(progressStatus < 100){
                     progressStatus++;
-                    android.os.SystemClock.sleep(25);
+                    android.os.SystemClock.sleep(30);
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
