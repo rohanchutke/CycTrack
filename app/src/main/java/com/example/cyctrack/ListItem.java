@@ -78,7 +78,7 @@ public class ListItem extends AppCompatActivity {
         ForegroundColorSpan uicolor1 = new ForegroundColorSpan(getResources().getColor(R.color.background_color));
 
         // Setting the start and end points to color the text
-        sstitle.setSpan(uicolor1, 9, 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sstitle.setSpan(uicolor1, 6, 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         titleSubmissions.setText(sstitle);
 
     }

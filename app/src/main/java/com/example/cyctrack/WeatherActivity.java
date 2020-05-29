@@ -38,8 +38,8 @@ import java.lang.reflect.Type;
 public class WeatherActivity extends AppCompatActivity implements LocationListener {
 
     // Declaring variables
-    TextView txtCity, txtDescription, txtHumidity, txtCelsius, tvSettext, tvAboutus, tvTitle;
-    Button btn_maps, btn_feedback;
+    TextView txtCity, txtDescription, txtHumidity, txtCelsius, tvSettext, tvTitle;
+    Button btn_maps, btn_feedback, btn_Aboutus;
     ImageView imageView;
 
     LocationManager locationManager;
@@ -63,7 +63,7 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
         tvTitle = findViewById(R.id.tv_title_weather);
         imageView = (ImageView) findViewById(R.id.imageView);
         tvSettext = findViewById(R.id.tv_settext);
-        tvAboutus = findViewById(R.id.tv_aboutus);
+        btn_Aboutus = findViewById(R.id.tv_aboutus);
         btn_feedback = findViewById(R.id.btn_feedback);
         btn_maps = findViewById(R.id.btn_maps1);
 
@@ -109,16 +109,13 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
 
 
         // If clicked on About us button go to  About us activity
-        tvAboutus.setOnClickListener(new View.OnClickListener() {
+        btn_Aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(WeatherActivity.this, AboutActivity.class);
                 startActivity(i);
             }
         });
-
-        tvAboutus.setPaintFlags(tvAboutus.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-
 
         String title = tvTitle.getText().toString();
         SpannableString sstitle = new SpannableString(title);
@@ -273,15 +270,19 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
             }
 
             //// Setting humidity string of the weather condition based on infromation receieved from OPen weatherMap
-            txtHumidity.setText(String.format("%d%%", openWeatherMap.getMain().getHumidity()));
+            String humidity_string = "Humidity: ";
+            txtHumidity.setText(humidity_string + String.format("%d%%", openWeatherMap.getMain().getHumidity()));
 
             // Setting temperature string of the weather condition based on infromation receieved from OPen weatherMap
             txtCelsius.setText(String.format("%.2f °C", openWeatherMap.getMain().getTemp()));
 
             // Load image from OpenWeather MAp based on the description of current weather condition
-            Picasso.get()
+            Picasso.get()/*
                     .load(new StringBuilder("https://openweathermap.org/img/wn/").append(openWeatherMap.getWeather().get(0).getIcon())
                             .append("@2x.png").toString())
+                    .into(imageView);*/
+            .load(new StringBuilder("https://openweathermap.org/img/w/").append(openWeatherMap.getWeather().get(0).getIcon())
+                    .append(".png").toString())
                     .into(imageView);
 
         }

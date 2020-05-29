@@ -15,8 +15,8 @@
 
     <item
         android:bottom="12dp"
-        android:drawable="@drawable/ic_volume_off_black_24dp"
+        android:drawable="@drawable/ic_baseline_phone_disabled_24"
         android:left="12dp"
         android:right="12dp"
-        android:top="12dp"/>
+        android:top="12dp" />
 </layer-list>

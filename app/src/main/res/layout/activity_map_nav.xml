@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/testbg1gimpblur"
+    android:background="#fff"
     tools:context=".MapNavActivity">
 
     <com.mapbox.services.android.navigation.ui.v5.NavigationView

@@ -184,6 +184,7 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
             //start the program if permission is granted
             doStuff();
         }
+
         edt_search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -204,7 +205,7 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
             }
         });
 
-        // Using ballon library to show a pop up When user clicks on DND mode to explain its functionality
+        // Using balloon library to show a pop up When user clicks on DND mode to explain its functionality
         Balloon balloon = new Balloon.Builder(getApplicationContext())
                 .setArrowSize(15)
                 .setArrowOrientation(ArrowOrientation.BOTTOM)
@@ -222,7 +223,7 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
                 .build();
 
 
-        // Setting the ballon on when clicked for 2 sec
+        // Setting the balloon on when clicked for 2 sec
         iv_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -260,7 +261,7 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
             //commented, this is from the old version
             // this.onLocationChanged(null);
         }
-        Toast.makeText(this, "Waiting for GPS connection!", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Waiting for GPS connection!", Toast.LENGTH_SHORT).show();
     }
 
     // CHecking for minimum api level and then granting access
@@ -601,7 +602,6 @@ public class MapTestActivity extends AppCompatActivity implements OnMapReadyCall
             case R.id.btn_review_route: {
                 Intent i = new Intent(MapTestActivity.this, AddItem.class);
                 startActivity(i);
-
             }
         }
     }
